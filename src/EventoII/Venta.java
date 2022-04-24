@@ -2,19 +2,18 @@ package EventoII;
 
 import java.time.LocalDate;
 
-
-
 public class Venta {
+	
 	private LocalDate fechaVenta;
-	private Entrada entrada = new Entrada();
+	private Ticket ticket;
 	private Cliente cliente = new Cliente();
 	
 	public Venta() {	
 	}
-	
-	public Venta(LocalDate fechaVenta, Entrada entrada, Cliente cliente) {
+
+	public Venta(LocalDate fechaVenta, Ticket ticket, Cliente cliente) {
 		this.fechaVenta = fechaVenta;
-		this.entrada = entrada;
+		this.ticket = ticket;
 		this.cliente = cliente;
 	}
 
@@ -26,12 +25,12 @@ public class Venta {
 		this.fechaVenta = fechaVenta;
 	}
 
-	public Entrada getEntrada() {
-		return entrada;
+	public Ticket getTicket() {
+		return ticket;
 	}
 
-	public void setEntrada(Entrada entrada) {
-		this.entrada = entrada;
+	public void setTicket(Ticket ticket) {
+		this.ticket = ticket;
 	}
 
 	public Cliente getCliente() {
@@ -41,4 +40,8 @@ public class Venta {
 	public void setCliente(Cliente cliente) {
 		this.cliente = cliente;
 	}
+	
+	
+	
+	
 }

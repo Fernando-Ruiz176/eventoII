@@ -1,6 +1,7 @@
 package EventoII;
 
 public class Asiento {
+	
 	private int asiento;
 	private String tipo;
 	private boolean estado;
@@ -12,6 +13,16 @@ public class Asiento {
 		this.asiento = asiento;
 		this.tipo = tipo;
 		this.estado = estado;
+	}
+	
+	public int checkTipoTicket() {
+		if (this.tipo == "PALCO") {
+			return 100000;
+		}else if (this.tipo == "PLATEA") {
+			return 60000;
+		}else {
+			return 30000;
+		}
 	}
 
 	public int getAsiento() {
@@ -36,10 +47,6 @@ public class Asiento {
 
 	public void setEstado(boolean estado) {
 		this.estado = estado;
-	}
-
-	public int checkTipoEntrada() {
-		return 0;
 	}
 	
 	
